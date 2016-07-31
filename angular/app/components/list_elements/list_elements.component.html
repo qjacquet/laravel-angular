@@ -1,0 +1,16 @@
+<md-content>
+    <div layout="row" layout-wrap>
+        <div flex="20" ng-repeat="element in vm.elements.elements">
+            <md-card>
+                <img src="data:image/png;base64,{{element.photo}}" class="md-card-image" alt="image caption">
+                <md-card-content>
+                    <h2>{{element.titre}}</h2>
+                    <p>{{element.lieu}}</p>
+                </md-card-content>
+                <md-card-footer>
+                    {{element.description}}
+                </md-card-footer>
+            </md-card>
+        </div>
+    </div>
+</md-content>
