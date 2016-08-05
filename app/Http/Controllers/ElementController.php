@@ -31,7 +31,7 @@ class ElementController extends Controller
 
     public function get()
     {
-        $elements = Element::get();
+        $elements = Element::paginate(12);
 
         return response()
         ->success(compact('elements'));

@@ -1,4 +1,4 @@
-<md-content>
+<!--<md-content>
     <div layout="row" layout-wrap>
         <div flex="20" ng-repeat="element in vm.elements.elements">
             <md-card>
@@ -13,4 +13,28 @@
             </md-card>
         </div>
     </div>
-</md-content>
+</md-content>-->
+
+<md-content class="md-padding" layout-xs="column" layout="row" layout-wrap>
+    <div flex-xs flex-gt-xs="25" ng-repeat="element in vm.elements.elements.data">
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{element.titre}}</span>
+            <span class="md-subhead">{{element.lieu}}</span>
+          </md-card-title-text>
+          <md-card-title-media>
+           
+                <img ng-src="data:image/png;base64,{{element.photo}}" class="md-media-lg card-media" alt="image caption">
+            
+          </md-card-title-media>
+        </md-card-title>
+        <!--<md-card-actions layout="row" layout-align="end center">
+          <md-button>Action 1</md-button>
+          <md-button>Action 2</md-button>
+        </md-card-actions>-->
+      </md-card>
+    </div>
+    <md-button ng-click="vm.previousPage()">Précedent</md-button>
+    <md-button ng-click="vm.nextPage()">Suivant</md-button>
+  </md-content>

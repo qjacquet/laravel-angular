@@ -22,7 +22,7 @@
         <div id="app-shell-header">
             <img src="img/icons/logo.svg" width="171" height="41">
         </div>
-        <div id="app-shell-content">Chargement en cours ...</div>
+        <div id="app-shell-content"></div>
     </app-shell>
 
     <app-view></app-view>
